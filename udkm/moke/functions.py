@@ -12,7 +12,8 @@ export_path = "results/"
 
 
 def load_data(date, time, voltage, col_to_plot):
-    file = data_path+str(date)+"_"+h.timestring(time)+"/Fluence/-1.0/"+str(voltage)+"/overviewData.txt"
+    file = data_path + str(date) + "_" + h.timestring(time) 
+	+ "/Fluence/-1.0/" + str(voltage) + "/overviewData.txt"
     data = np.genfromtxt(file, comments="#")
     return(data[:, 0], data[:, col_to_plot])
 
